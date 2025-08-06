@@ -1,5 +1,5 @@
 function [NIR_deg, NIR_p, G_deg, G_p] = polyfit_converg_deg(mean_NIR_cycle, mean_G_cycle, stop_thresh)
-% Get degree that polyfit converges, and corresponding coeffici3nts
+% Get degree that polyfit converges, and corresponding coefficients
 if nargin<3
     stop_thresh = 0.99;
 end

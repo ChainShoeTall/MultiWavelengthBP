@@ -16,8 +16,8 @@ function [mean_cycle, selected_ind] = high_corr_median_cycle(cycles, method, ref
 %   Outputs:
 %     mean_cycle     - A 1-by-T row vector representing the refined mean cycle,
 %                      computed from high-correlation cycles only.
-%     selected_ind   - A logical index vector (1-by-N) indicating which cycles
-%                      were used in the final mean calculation (those above
+%     selected_ind   - A numeric vector containing the indices of cycles
+%                      used in the final mean calculation (those above
 %                      median correlation).
 %
 %   Example:

@@ -53,7 +53,8 @@ function [anomaly_idx, env_diff, upper_env, lower_env, good_peaks, good_troughs]
 
     % Filter peaks and troughs by removing any that fall within the expanded anomaly indices
     pk_mask = true(size(pk_locs));
-    tr_mask = true(size(pk_locs));
+    % Trough mask should match the number of trough locations rather than peaks
+    tr_mask = true(size(tr_locs));
     for i=1:length(pk_locs)
         if ismember(pk_locs(i), anomaly_idx)
             pk_mask(max(i-2,1):min(i+2,length(pk_locs))) = false;
